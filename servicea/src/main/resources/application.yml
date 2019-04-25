@@ -1,0 +1,43 @@
+server:
+  port: 9000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      #      register-with-eureka: false
+      fetch-registry: true
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/transacctiontest?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver: com.jdbc.mysql.Driver
+  application:
+    name: serviceA
+tx-lcn:
+  client:
+    manager-address: localhost:8070
+  #如果需要启动集群配置，只需要启动多个txManager，然后将地址加到后方即可，多个地址用逗号隔开
+#  logger:
+#    enabled: true
+#    jdbc-url: jdbc:mysql://localhost:3306/tx-manager?serverTimezone=GMT%2B8
+#    username: root
+#    password: root
+#    driver-class-name: com.mysql.jdbc.Driver
+# 官方提供取消请求超时重试的配置
+ribbon:
+  MaxAutoRetriesNextServer: 0
+  message:
+    netty:
+      reconnect-count: 10
+      reconnect-delay: 1000
+feign:
+  httpclient:
+    enabled: true
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

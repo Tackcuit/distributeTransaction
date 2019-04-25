@@ -1,0 +1,28 @@
+server:
+  port: 9002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      #      register-with-eureka: false
+      fetch-registry: true
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/transacctiontest?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver: com.jdbc.mysql.Driver
+  application:
+    name: serviceC
+tx-lcn:
+  client:
+    manager-address:
+      default: 59.108.71.108:8070
+  logger:
+    enabled: true
+    jdbc-url: jdbc:mysql://localhost:3306/tx-manager?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+ribbon:
+  MaxAutoRetriesNextServer: 0

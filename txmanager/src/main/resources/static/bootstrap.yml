@@ -1,0 +1,66 @@
+server:
+  port: 7970
+eureka:
+#  instance:
+#    leaseExpirationDurationInSeconds: 30
+#    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+#    leaseRenewalIntervalInSeconds: 10
+#    health-check-url-path: /actuator/health #2.0后actuator的地址发生了变化
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+spring:
+  application:
+    name: txManager
+  redis:
+    host: 59.108.71.108
+    password: xinshen_redis
+    port: 26379
+  #    timeout: 0
+#  boot:
+#    admin:
+#      client:
+#        instance:
+#          health-url: /actuator/health
+#        password: qwer1234
+tx-lcn:
+  manager:
+    port: 8070 #后台管理的端口
+    host: localhost
+    admin-key: qwer1234
+#management:
+#  endpoint:
+#    health:
+#      show-details: always
+#  logger: #tx-manager日志记录地址，需要提前创建名为tx-manager的地址，需要记录log的时候添加mysql的依赖
+#    enabled: true
+#    jdbc-url: jdbc:mysql://123.56.216.210:3306/tx-manager
+#    username: root
+#    password: root
+
+
+#提供一份客户端需要的配置
+# 客户端需要添加的依赖
+#  <dependency>
+#     <groupId>com.codingapi.txlcn</groupId>
+#     <artifactId>txlcn-tc</artifactId>
+#     <version>5.0.2.RELEASE</version>
+#  </dependency>
+#
+#  <dependency>
+#     <groupId>com.codingapi.txlcn</groupId>
+#     <artifactId>txlcn-txmsg-netty</artifactId>
+#     <version>5.0.2.RELEASE</version>
+#  </dependency>
+# 配置文件
+#tx-lcn:
+#  client:
+#    manager-address:
+#      default: localhost:8070 #指定管理中心的地址
+#ribbon:
+#  MaxAutoRetriesNextServer: 0 #官方提供取消超时重试
+# 客户端启动类需要加入的注解
+#  @EnableDistributedTransaction
+# 对应要开启分布式事务的service需要加入@LcnTransaction注解，同时要保证@Transactional注解有效
