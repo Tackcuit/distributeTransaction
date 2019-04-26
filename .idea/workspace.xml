@@ -59,6 +59,7 @@
           <entry key="Dockerfile" value="2" />
           <entry key="class" value="5" />
           <entry key="cmd" value="2" />
+          <entry key="gitignore" value="1" />
           <entry key="java" value="107" />
           <entry key="md" value="1" />
           <entry key="properties" value="6" />
@@ -72,7 +73,7 @@
           <entry key="Dockerfile" value="2" />
           <entry key="JAVA" value="107" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Properties" value="6" />
           <entry key="XML" value="46" />
           <entry key="YAML" value="62" />
@@ -91,12 +92,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servicea/src/main/java/com/xinshen/servicea/config/TomcatDataSourceAspect.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="25" column="83" lean-forward="true" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/eureka/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-16" />
           </provider>
         </entry>
       </file>
@@ -162,15 +170,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serviceb/src/main/java/com/xinshem/serviceb/config/MysqlPrimaryKeysProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -658,7 +657,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556191328234" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556239612112" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -780,15 +779,16 @@
       <workItem from="1552268130802" duration="9092000" />
       <workItem from="1552377984271" duration="4939000" />
       <workItem from="1552445991169" duration="1621000" />
-      <workItem from="1556175600590" duration="15419000" />
+      <workItem from="1556175600590" duration="15673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129082000" />
+    <option name="totallyTimeSpent" value="129336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-115" y="-1088" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17092651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -836,13 +836,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/eureka/src/main/java/com/xinshen/eureka/EurekaApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eureka/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -1180,6 +1173,11 @@
         <state relative-caret-position="374">
           <caret line="25" column="83" lean-forward="true" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16" />
       </provider>
     </entry>
   </component>
