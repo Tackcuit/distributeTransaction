@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableFeignClients
 @EnableDiscoveryClient
 @EnableDistributedTransaction
-@EnableTransactionManagement
+//@EnableTransactionManagement
 public class ServicecApplication {
 
     public static void main(String[] args) {

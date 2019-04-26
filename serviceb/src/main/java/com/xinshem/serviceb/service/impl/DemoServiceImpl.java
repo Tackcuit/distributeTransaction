@@ -2,6 +2,7 @@ package com.xinshem.serviceb.service.impl;
 
 import com.codingapi.txlcn.tc.annotation.DTXPropagation;
 import com.codingapi.txlcn.tc.annotation.LcnTransaction;
+import com.codingapi.txlcn.tc.annotation.TxTransaction;
 import com.codingapi.txlcn.tc.annotation.TxcTransaction;
 import com.xinshem.serviceb.dao.DemoDao;
 import com.xinshem.serviceb.model.Demo;
@@ -23,18 +24,15 @@ public class DemoServiceImpl implements DemoSerivce {
     private FeignServiceA feignServiceA;
 
 
-    //    @LcnTransaction(propagation = DTXPropagation.REQUIRED)
-//    @TxcTransaction
-//    @TxTransaction
     @TxcTransaction(propagation = DTXPropagation.REQUIRED)
-    @Transactional(rollbackFor = Exception.class)
-//    @LcnTransaction(propagation = DTXPropagation.REQUIRED)
+//    @TxTransaction(propagation = DTXPropagation.REQUIRED)
+    @Transactional(rollbackFor = RuntimeException.class)
     @Override
     public int add(Demo demo) {
         try {
-            feignServiceA.add(demo.getName());
+//            feignServiceA.add(demo.getName());
             int i = demoSerivce.insertDemo(demo);
-//            int ex = 10 / 0;
+            int ex = 10 / 0;
             return i;
         } catch (Exception e) {
             System.out.println("出现问题,抛出异常" + e);

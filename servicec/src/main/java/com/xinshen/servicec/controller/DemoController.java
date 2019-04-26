@@ -25,6 +25,12 @@ public class DemoController {
         demo.setName(name);
         //在b服务中调用a服务
 //        feignServiceB.add(name);
-        return demoSerivce.add(demo);
+        try {
+            int add = demoSerivce.add(demo);
+            return add;
+        } catch (Exception e) {
+            return 12345;
+        }
+//        return demoSerivce.add(demo);
     }
 }

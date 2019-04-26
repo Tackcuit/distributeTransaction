@@ -14,6 +14,10 @@ spring:
     driver: com.jdbc.mysql.Driver
   application:
     name: serviceB
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: my_service_test_group
 tx-lcn:
   client:
     manager-address: localhost:8070
