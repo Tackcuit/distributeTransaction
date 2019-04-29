@@ -5,7 +5,9 @@
     <file url="file://$PROJECT_DIR$/eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/servicea" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/serviceb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/serviceb-mq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/servicec" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/servicec-mq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/txlcn-tm/txlcn-tm" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/txmanager" charset="UTF-8" />
   </component>

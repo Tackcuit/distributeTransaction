@@ -10,7 +10,9 @@
         <module name="MytransactionDemolcn" />
         <module name="servicea" />
         <module name="serviceb" />
+        <module name="serviceb (1)" />
         <module name="servicec" />
+        <module name="servicec (1)" />
         <module name="txlcn-tm" />
         <module name="txmanager" />
       </profile>
